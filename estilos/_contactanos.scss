@@ -1,0 +1,536 @@
+body {
+  margin:0;
+  background-color: blue;
+}
+
+
+  .sectionContacto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: $colorAzul;
+    
+    .divContacto {
+      display: flex;
+
+      flex-direction: column;
+      grid-area: divContacto;
+      font-weight:light;
+      font-family:$monserrat;
+      width: 500px;
+      margin: 25px;
+      justify-content: center;
+      text-align: center;
+      background-color: $colorBlanco;
+    
+    form{
+      padding:40px;
+      text-align: justify;
+    }
+    
+    input{
+      @extend .estiloForm;
+      text-align: justify;
+      height: 25px;
+      width: 30px;
+    } 
+    
+    textarea {
+      text-align: justify;
+      margin-top: 15px;
+      width: 100px;
+      @extend .estiloForm;
+    }
+    
+    h2 {
+      text-align: center;
+      color:$colorAzulTarjetas;
+      font-size:$h2Desk;
+      font-family:$roboto;
+    }
+    
+    .boton {
+      input{
+        height: 30px;
+            width: 49%;
+          }
+        }
+  }
+}
+  
+  .flexContacto {
+    height: 70vh;
+    padding:0 3%;
+    background-color: rgb(230, 235, 240) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    
+    h2 {
+      font-weight:500;
+      margin-top:1vh;
+      color:$colorAzul;
+      font-size: $h3Desk;
+      font-family:$monserrat;
+      span{
+      font-weight:bold;
+      }
+    }
+
+    h3 {
+        color:$colorNegro;
+        font-size:  17px;
+        font-weight: 500;
+        font-family:$monserrat;
+        padding: 0;
+        margin:22px 0 5px 0;
+        i{
+          color:rgb(170, 166, 166);
+        }
+      }
+
+    article {
+      color:$colorAzul;
+      font-size: 17px;
+      font-weight:light;
+      font-family: $roboto;
+      text-align: center;
+      i{
+        color:rgb(170, 166, 166);
+      }
+      a{
+        color:$colorAzul;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight:normal;
+        font-family: $roboto;
+        padding-bottom: 2px;
+        text-align: center;
+      }
+    }
+
+    #titulo {
+      text-align: center;
+      justify-content: center;
+    }
+
+    #andres {
+      @extend .tarjeta;
+      transition: height 0.4s ease-in-out;
+      img{
+        transition: height 0.4s ease-in-out;
+        }
+    }
+    
+    #andres:hover {
+      height:420px;
+      align-content: center;
+      background-color:$colorBlanco;   
+      transition: all 0.7s ease-in-out;
+
+      .contenido{
+        transition: all 1s ease-in-out;
+        visibility: visible;
+        transition-delay: 0.3s;
+      }
+      
+      img {
+        height: 100px;
+        margin:5px;
+      } 
+    }
+
+    #florencia {
+      @extend .tarjeta;
+      transition: height 0.4s ease-in-out;
+      img{
+        transition: height 0.4s ease-in-out;
+        }
+    }
+
+    #florencia:hover {
+      height:420px;
+      align-content: center;
+      background-color:$colorBlanco;   
+      transition: all 0.7s ease-in-out;
+
+      .contenido{
+        transition: all 1s ease-in-out;
+        visibility: visible;
+        transition-delay: 0.3s;
+      }
+      
+      img {
+        height: 100px;
+        margin:5px;
+      } 
+    }
+
+    .tarjeta {
+      box-shadow: rgb(151, 148, 148) 2px 3px 4px; 
+      height:300px;
+      width: 350px;
+      position: relative;
+      justify-content: center;
+      align-self: center;
+      background-image: url("../Imagenes/fondoVertical.jpg");
+
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(238, 238, 238);
+      .contenido {
+        padding:0;
+        visibility: hidden;
+      }
+
+      .contenido900px {
+        height: 0px;
+        visibility: hidden;
+      }
+      img {
+        visibility: visible;
+        margin: 20px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgb(255, 255, 255);
+        box-shadow: rgb(90, 87, 87) 1px 4px 4px; 
+        height:170px;
+      }
+    }
+
+    
+  }
+
+.estiloForm {
+  background-color: rgba(124, 149, 196, 0.637);
+  border-style:solid;
+  width: 100%;
+  border-width: 0.5px;
+  border-color: rgba(255, 255, 255, 0.596);
+  font-family:$monserrat;
+}
+
+@media (max-width: 900px) {
+  .flexContacto {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    #andres {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: height 0.4s ease-out;
+
+      .contenido {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+        
+      img{
+        margin-bottom: 7px;
+        align-self: center;
+        height: 100px;
+        width: 100px;
+        transition: height 0.4s ease-in-out;
+      }
+
+      .andres900px{
+        width: 100%;
+        padding: 10px;
+        transition: all 0.7s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-self: center;
+      }
+    }
+    
+    #andres:hover {
+      height:230px;
+      width: 470px;
+      transition: all 1s ease-in-out;
+
+      .contenido {
+        visibility: hidden;
+      }
+      
+      .contenido900px{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        transition: all 1s ease-in-out;
+        visibility: visible;
+        animation: efecto_menu 1.2s;
+      }
+
+      .andres900px{
+        width: 150px;
+        padding: 10px;
+        transition: all 0.7s ease-in-out;
+      }  
+
+      img {
+        margin: 0px;
+        align-self: center;
+        height: 100px;
+        width: 100px;
+        transition: height 0.4s ease-in-out;
+      }
+    }
+
+    #florencia {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: height 0.4s ease-out;
+
+      .contenido {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }    
+      
+      img{
+        margin-bottom: 7px;
+        align-self: center;
+        height: 100px;
+        width: 100px;
+        transition: height 0.4s ease-in-out;
+      }
+
+      .florencia900px{
+        width: 100%;
+        padding: 10px;
+        transition: all 0.7s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-self: center;
+      }
+    }
+    
+    #florencia:hover {
+      height:230px;
+      width: 470px;
+      transition: all 1s ease-in-out;
+
+      .contenido {
+        position: absolute;
+        visibility: hidden;
+      }
+
+      .contenido900px{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        justify-self: center;
+        transition: all 1s ease-in-out;
+        visibility: visible;
+        animation: efecto_menu 1.2s;
+      }
+
+      .florencia900px{
+        align-self: center;
+        width: 150px;
+        padding: 10px 0 10px 10px;
+        transition: all 0.7s ease-in-out;
+      }  
+      img {
+        margin: 0px;
+        align-self: center;
+        height: 100px;
+        width: 100px;
+        transition: height 0.4s ease-in-out;
+      }
+    }
+
+    .tarjeta {
+      background-image: url("../Imagenes/fondoHorizontal.jpg");
+      background-repeat:no-repeat;
+      background-size: cover;
+      height:230px;
+      width: 470px;
+
+      .contenido900px {
+        display: flex;
+        height: 0;
+        width: 0;
+        position: absolute;
+        flex-direction: column;
+        padding-top:17px;
+        visibility: hidden;
+        height: 0;
+        justify-content: center;
+        article {
+          color:$colorAzul;
+          font-size: 17px;
+          font-weight:light;
+          font-family: $roboto;
+          text-align: center;
+          padding:4px;
+          i{
+            color:rgb(170, 166, 166);
+          }
+          a{
+            color:$colorAzul;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight:normal;
+            font-family: $roboto;
+            text-align: center;
+          }
+        }
+      }
+
+      img {
+        height:100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .flexContacto {    
+    #andres {
+      flex-direction: column;
+      transition: height 0.4s ease-in-out;
+      img{
+        transition: height 0.4s ease-in-out;
+        }
+      .contenido {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      } 
+
+      .contenido900px {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      } 
+  }
+    
+    #andres:hover {
+      width: 300px;
+      height:300px;
+      transition: all 0.7s ease-in-out;
+      .contenido900px {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+      .contenido{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        transition: all 1s ease-in-out;
+        visibility: visible;
+        animation: efecto_menu 1.2s;
+      }
+      
+      img {
+        height: 0;
+        margin:0;
+        visibility: hidden;
+        position: absolute;
+      } 
+    }
+
+    #florencia {
+      flex-direction: column;
+      transition: height 0.4s ease-in-out;
+      img{
+        transition: height 0.4s ease-in-out;
+        }
+      .contenido {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      } 
+
+      .contenido900px {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      } 
+  }
+
+    #florencia:hover {
+      width: 300px;
+      height:300px;
+      transition: all 0.7s ease-in-out;
+      .contenido900px {
+        position: absolute;
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+      .contenido{
+         position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        transition: all 1s ease-in-out;
+        visibility: visible;
+        animation: efecto_menu 1.2s;
+      }
+      
+      img {
+        height: 0;
+        margin:0;
+        visibility: hidden;
+        position: absolute;
+      } 
+    }
+
+    .tarjeta {
+      box-shadow: rgb(151, 148, 148) 2px 3px 4px; 
+      height:250px;
+      width: 250px;
+      position: relative;
+      justify-content: center;
+      align-self: center;
+      background-image: url("../Imagenes/fondoVertical.jpg");
+
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(238, 238, 238);
+      .contenido {
+        padding:0;
+        visibility: hidden;
+      }
+
+      .contenido900px {
+        height: 0px;
+        visibility: hidden;
+      }
+      img {
+        visibility: visible;
+        margin: 20px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgb(255, 255, 255);
+        box-shadow: rgb(90, 87, 87) 1px 4px 4px; 
+        height:100px;
+      }
+    }
+}
+}
+

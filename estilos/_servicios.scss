@@ -1,0 +1,322 @@
+.flexServicio {
+    padding:60px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-color: $colorAzul;
+
+    h2{
+        color:rgb(216, 228, 247);
+        font-size: $h3Desk;
+        font-family:$monserrat;
+    }
+
+    article {
+        font-size:$articleDesk;
+        font-weight:light;
+        font-family: $monserrat;
+        text-align: center;
+    }
+
+    .servicio{
+        @extend .estiloServicio;
+        transition: all 0.5s ease-in-out;
+        color:rgb(216, 228, 247);
+
+        i {
+            font-size: 55px;
+        }
+    }
+}
+
+.estiloServicio {
+    height:210px;
+    width: 325px;
+    margin:35px;
+    padding-top: 90px;
+    position: relative;
+    justify-content: center;
+    align-self: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.infoServicios {
+    margin:0;
+    #azul{ 
+        background-color: $colorAzul;
+        h2{
+            text-decoration: none;
+            color:$colorAmarillo;
+            font-size:$h2Desk;
+            font-family:$roboto;
+        }
+        
+        article{
+            color:$colorBlanco;
+            font-size:$articleDesk;
+            font-family:$monserrat;
+            text-align: justify;
+        }
+    }
+
+    #amarillo{
+        background-color: $colorAmarillo;
+        h2{
+            text-decoration: none;
+            color:$colorAzul;
+            font-size:$h2Desk;
+            font-family:$roboto;
+        }
+             
+        article{
+            color:$colorNegro;
+            font-size:$articleDesk;
+            font-family:$monserrat;
+            text-align: justify;
+        }
+    }
+
+    .flexServicioEspecifico {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding:0;
+        margin:0;
+        
+        .imagen{
+        align-self: center;
+            img {
+            height: 500px;
+            width: 550px;
+        }
+        }
+
+        .text {
+        transition: all 0.5s ease-in-out;
+        align-self: center;
+        padding:40px;
+        }
+    }
+ 
+}
+.estiloGrid {
+    justify-content: center;
+    text-align: center;
+    padding:0;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .flexServicio {
+        padding:30px 15px;
+        .servicio{
+            height:110px;
+            width: 325px;
+            margin:15px;
+            padding-top: 40px;
+    
+            h2{
+                font-size: 20px;
+            }
+            i {
+                font-size: 35px;
+            }
+
+        }
+    }
+
+    .infoServicios {
+        margin:0;
+        #azul{ 
+            h2{
+                font-size:$h2Desk;
+            }
+            
+            article{
+                font-size:$articleTablet;
+            }
+        }
+    
+        #amarillo{
+            background-color: $colorAmarillo;
+            h2{
+                font-size:$h2Desk;
+            }
+                 
+            article{
+                font-size:$articleTablet;
+            }
+        }
+        .flexServicioEspecifico {
+            padding:0;
+            margin:0;
+            
+            .imagen{
+            align-self: center;
+            height: 100%;
+            margin:0;
+                img {
+                    height: 300px;
+                    width: 350px;
+                }
+            }
+
+            .text {
+                transition: all 0.5s ease-in-out;
+                align-self: center;
+                padding:10px;
+            }
+        }   
+        }
+}
+
+@media (max-width: 680px) {
+
+.infoServicios {
+    margin:0;
+    #azul{ 
+        h2{
+            font-size:$h2Mobile;
+        }
+        
+        article{
+            font-size:14px;
+        }
+    }
+
+    #amarillo{
+        h2{
+            font-size:$h2Mobile;
+        }
+             
+        article{
+            font-size:14px;
+        }
+    }
+    .flexServicioEspecifico {      
+        .imagen{
+            img {
+                height: 250px;
+                width: 300px;
+            }
+        }
+
+        .text {
+            padding:12px;
+        }
+    }   
+    }
+}
+
+@media (max-width: 580px) {
+    .flexServicio {
+        padding:30px 15px;
+        .servicio{
+            height:90px;
+            width: 325px;
+            margin:15px;
+            padding-top: 20px;
+    
+            h2{
+                font-size: 15px;
+            }
+            i {
+                font-size: 20px;
+            }
+
+        }
+    }
+    .infoServicios {
+        margin:0;
+        #azul{ 
+            h2{
+                font-size:17px;
+            }
+            
+            article{
+                font-size:9px;
+            }
+        }
+    
+        #amarillo{
+            h2{
+                font-size:17px;
+            }
+                 
+            article{
+                font-size:9px;
+            }
+        }
+        .flexServicioEspecifico {      
+            .imagen{
+                img {
+                    height: 100%;
+                    width: 200px;
+                }
+            }
+    
+            .text {
+                padding:0px 12px;
+            }
+        }   
+        }
+}
+
+@media (max-width: 420px) {
+    .flexServicio {
+        padding:30px 15px;
+        .servicio{
+            height:90px;
+            width: 325px;
+            margin:15px;
+            padding-top: 20px;
+    
+            h2{
+                font-size: 12px;
+            }
+            i {
+                font-size: 17px;
+            }
+
+        }
+    }
+    .infoServicios {
+        margin:0;
+        #azul{ 
+            h2{
+                font-size:17px;
+            }
+            
+            article{
+                font-size:9px;
+            }
+        }
+    
+        #amarillo{
+            h2{
+                font-size:17px;
+            }
+                 
+            article{
+                font-size:9px;
+            }
+        }
+        .flexServicioEspecifico {      
+            .imagen{
+                img {
+                    height: 0;
+                    width: 0;
+                    visibility: hidden;
+                }
+            }
+    
+            .text {
+                padding:0px 12px 10px 12px;
+            }
+        }   
+        }
+}

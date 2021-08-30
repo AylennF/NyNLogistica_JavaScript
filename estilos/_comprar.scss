@@ -1,0 +1,222 @@
+.seccionCompraServicio {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    margin: 20px 0 40px 0;
+
+    #btnComprar {
+        align-self: center;
+        color:$colorBlanco;
+        background-color:$colorAzul;
+        border-style: none;
+        padding:7px;
+        margin:4px;
+        width: 15vw;
+          a{
+            text-decoration: none;
+            background-color:$colorAzul;
+            color:$colorBlanco;
+            border-style: none;
+            padding:7px;
+            margin:4px;
+          }
+    }
+
+    h2 {
+      text-align: center;
+      color:$colorAzul;
+      font-family: $monserrat;
+      font-size:30px;
+    }
+
+    .compraServicio{
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction:row;
+      margin:0 20px;
+
+        div {
+          width: 15vw;  
+          background-color: $colorBlanco;
+          margin: 30PX; 
+
+          button{
+            background-color:$colorAzul;
+            color:$colorBlanco;
+            border-style: none;
+            padding:7px;
+            margin:4px;
+          }
+
+          p{
+            font-family: $monserrat;
+          }
+        }
+
+      input {
+        @extend .estiloForm;
+        text-align: center;
+        align-self: center;
+        height: 30px;
+        font-family: $monserrat;
+        width: 19%;
+      }
+
+      h3 {
+        text-align: center;
+        justify-tracks: center;
+        font-family: $monserrat;
+        font-size:18px;
+      }
+    }
+  }
+
+.tituloBoleta {
+  text-align: center;
+  color:$colorAzul;
+  font-family: $monserrat;
+  font-size:30px;
+}
+
+.divBoleta {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  text-align: left;
+  flex-direction:row;
+  width: 80vw;
+  margin:10px 7vw;
+  padding: 0 3vw; 
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.418);
+  background-color: $colorBlanco;
+  font-family: $monserrat;
+
+  .cantidad {
+    text-align: center;
+    justify-tracks: center;
+    font-family: $monserrat;
+    font-weight:400;
+    font-size:15px;
+  }
+}
+
+.seccionesBoleta{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  text-align: left;
+  flex-direction:row;
+  width: 80vw;
+  margin:10px 7vw;
+  padding: 0 3vw;
+  background-color: $colorHover;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.418);
+  font-family: $monserrat;
+  font-weight:900;
+}
+   
+.seccionesTotalBoleta{
+  display: flex;
+  align-content: right;
+  justify-content: space-between;
+  text-align: right;
+  flex-direction:row;
+  width: 80vw;
+  margin:10px 7vw;
+  padding: 0 3vw;
+  background-color: $colorHover;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.418);
+  font-family: $monserrat;
+  font-weight:900;
+}
+
+.divBotonAceptar{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  margin: 20px 0 40px 0;
+
+  #btnAceptarCompra {
+    align-self: center;
+    color:$colorBlanco;
+    background-color:$colorAzul;
+    border-style: none;
+    padding:3px;
+    margin:1px;
+    width: 15vw;
+      a{
+        text-decoration: none;
+        background-color:$colorAzul;
+        color:$colorBlanco;
+        border-style: none;
+        padding:3px;
+        margin:1px;
+      }
+  }
+}
+
+.sectionInfoContacto{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: $colorAzul;
+  
+  .divContacto {
+    display: flex;
+    flex-direction: column;
+    grid-area: divContacto;
+    font-weight:light;
+    font-family:$monserrat;
+    width: 500px;
+    margin: 25px;
+    justify-content: center;
+    text-align: center;
+    background-color: $colorBlanco;
+  
+  form{
+    padding:40px;
+    text-align: justify;
+  }
+  
+  input{
+    @extend .estiloForm;
+    text-align: justify;
+    height: 25px;
+    width: 30px;
+  } 
+  
+  h2 {
+    text-align: center;
+    color:$colorAzulTarjetas;
+    font-size:$h2Desk;
+    font-family:$roboto;
+  }
+  
+  .boton {
+    input{
+      height: 30px;
+          width: 49%;
+        }
+      }
+}
+}
+
+
+.estiloForm {
+  background-color: rgba(124, 149, 196, 0.637);
+  border-style:solid;
+  width: 100%;
+  border-width: 0.5px;
+  border-color: rgba(255, 255, 255, 0.596);
+  font-family:$monserrat;
+}

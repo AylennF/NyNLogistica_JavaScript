@@ -1,0 +1,400 @@
+ .flexQuienesSomos {
+  display:flex;
+  flex-direction: row;
+  justify-content:center; 
+  background-color: $colorAzul;
+  padding: 0;
+  
+  article {
+    font-size:$articleDesk;
+    color:$colorBlanco;
+    font-family: $monserrat;
+    text-align: justify; 
+  }
+  
+  h2 {
+    color:$colorAmarillo;
+    font-size: $h2Desk;
+    font-family:$roboto;
+  }
+
+    .imagen {
+      height: 500px;
+    }
+    
+    .texto{
+      align-self: center;
+      padding:0 70px 0 70px;
+      }
+    }
+
+
+  .flexInfo{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+    
+    h3 {
+      padding:0 0 10px 0;
+      margin:0;
+      color:$colorAmarillo;
+      font-size: $h3Desk;
+      font-family:$roboto;
+      text-align: center;
+    }
+
+    article {
+      color:$colorBlanco;
+      font-size: $articleDesk;
+      font-family: $monserrat;
+      text-align: center;
+      margin:15px;
+    }
+    
+    &__1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 300px;
+      width: 400px;
+      margin:50px;
+      background-color: $colorAzul;
+      padding:30px;
+    }
+
+    &__2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 300px;
+      margin:50px;
+      width: 400px;
+      background-color: $colorAzul;
+      padding:30px;
+    }
+  }  
+
+  .flexMapa{
+    height: 400px;      
+    display:flex;
+    text-align: center;
+    justify-content:space-between;
+    padding:0;
+    background-color:$colorAzul;
+    
+    &__ubicacion {
+        width: 80vh;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column ;
+        text-align: center;
+        justify-content: center;
+
+        h2 {
+          color:$colorAmarillo;
+          font-size: $h2Desk;
+          font-family:$roboto;
+        }
+        
+        article {
+          text-align: center;
+          color:$colorBlanco;
+          font-size: $articleDesk;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        &__articleBold{
+          font-weight: bold;
+          }
+      } 
+
+      &__mapa {
+        &__tam{
+          height:100%;
+          width:50vw;
+        }
+      }
+  
+  
+    }
+
+  //MEDIAS
+  @media (max-width: 1250px) {
+    .flexInfo{
+      padding:10px;
+      h3 {
+        padding:0 0 10px 0;
+        margin:0;
+        color:$colorAmarillo;
+        font-size: $h3Desk;
+        font-family:$roboto;
+        text-align: center;
+      }
+
+      article {
+        color:$colorBlanco;
+        font-size: $articleDesk;
+        font-family: $monserrat;
+        text-align: center;
+      }
+    }
+
+    .flexQuienesSomos{
+      article {
+        font-size:$articleDesk;
+        color:$colorBlanco;
+        font-family: $monserrat;
+        text-align: justify; 
+      }
+      
+      h2 {
+        color:$colorAmarillo;
+        font-size: $h2Tablet;
+        font-family:$roboto;
+      }
+    
+        .imagen {
+          height: 500px;
+        }
+        
+        .texto{
+          align-self: center;
+          padding:0 30px 0 30px;
+          }
+    }
+
+    .flexMapa{  
+      height: 300px;      
+      h2 {
+        color:$colorAmarillo;
+        font-size: $h2Tablet;
+        font-family:$roboto;
+      }
+      
+      article {
+        text-align: center;
+        color:$colorBlanco;
+        font-size: $articleTablet;
+        font-family: 'Montserrat', sans-serif;
+      }
+      &__mapa {
+        &__tam{
+          height:100%;
+          width:50vw;
+        }
+      }
+    } 
+  }
+
+
+  @media (max-width: 1150px) {
+    .flexInfo{
+      padding:10px;
+      h3 {
+        padding:0 0 10px 0;
+        margin:0;
+        color:$colorAmarillo;
+        font-size: $h3Tablet;
+        font-family:$roboto;
+        text-align: center;
+      }
+  
+      article {
+        color:$colorBlanco;
+        font-size: $articleTablet;
+        font-family: $monserrat;
+        text-align: center;
+      }
+    }
+  
+    .flexQuienesSomos{
+      article {
+        font-size:$articleTablet;
+        color:$colorBlanco;
+        font-family: $monserrat;
+        text-align: justify; 
+      }
+      
+      h2 {
+        color:$colorAmarillo;
+        font-size: $h3Tablet;
+        font-family:$roboto;
+      }
+    
+        .imagen {
+          height: 400px;
+        }
+        
+        .texto{
+          align-self: center;
+          padding:0 30px 0 30px;
+          }
+    }
+}
+
+@media (max-width: 900px) {
+  .flexInfo{
+    padding:10px;
+    h3 {
+      padding:0 0 10px 0;
+      margin:0;
+      color:$colorAmarillo;
+      font-size: $h3Tablet;
+      font-family:$roboto;
+      text-align: center;
+    }
+
+    article {
+      color:$colorBlanco;
+      font-size: 13px;
+      font-family: $monserrat;
+      text-align: center;
+    }
+
+    &__1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      width: 400px;
+      margin:50px;
+      background-color: $colorAzul;
+      padding:30px;
+    }
+
+    &__2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      margin:50px;
+      width: 400px;
+      background-color: $colorAzul;
+      padding:30px;
+    }
+  }
+
+  .flexQuienesSomos{
+    article {
+      font-size:12px;
+      color:$colorBlanco;
+      font-family: $monserrat;
+      text-align: justify; 
+    }
+    
+    h2 {
+      color:$colorAmarillo;
+      font-size: $h3Tablet;
+      font-family:$roboto;
+    }
+  
+      .imagen {
+        height: 350px;
+      }
+      
+      .texto{
+        align-self: center;
+        padding:0 20px 0 20px;
+        }
+  }
+
+  .flexMapa{  
+    height: 300px;      
+    h2 {
+      font-size: $h2Mobile;
+    }
+    
+    article {
+      font-size: 14px;
+    } 
+    &__ubicacion {
+      padding:0px;
+    }
+  } 
+}
+
+@media (max-width: 730px) {
+  .flexInfo{
+    flex-direction: column;
+    &__1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 250px;
+      width: 80%;
+      background-color: $colorAzul;
+      padding:10px;
+    }
+
+    &__2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 250px;
+      width: 80%;
+      background-color: $colorAzul;
+      padding:10px;
+    }
+  }
+
+  .flexQuienesSomos{
+    padding:20px;
+    article {
+      font-size:12px;
+      color:$colorBlanco;
+      font-family: $monserrat;
+      text-align: justify; 
+    }
+    
+    h2 {
+      color:$colorAmarillo;
+      font-size: $h3Tablet;
+      font-family:$roboto;
+    }
+  
+      .imagen {
+        height: 0px;
+      }
+      
+      .texto{
+        align-self: center;
+        padding:0 20px 10px 20px;
+        }
+  }
+
+  .flexMapa{ 
+    flex-direction: column; 
+    height: 230px;  
+    padding: auto;  
+    background-color: $colorAzul;
+    &__ubicacion {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin:0;
+    padding-top: 10px;
+    width: 80%;
+    h2 {
+      color:$colorAmarillo;
+      font-size: $h2Mobile;
+    }
+    
+    article {
+      visibility: hidden;
+      text-align: center;
+      color:$colorBlanco;
+      font-size: 0px ;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+    &__mapa {
+      &__tam{
+        height:100%;
+        width:100%;
+      }
+    }
+  } 
+}
+

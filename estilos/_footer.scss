@@ -1,0 +1,295 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    padding-top: 3em;
+    justify-content: space-around;
+    text-align: center;
+    background-color: $colorNegroFooter;
+
+    &__ubicacion {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        width: 40vw;
+        height: 100%;
+
+        h3{
+            position: relative;
+            margin:4px;
+            text-decoration: none;
+            color: rgb(124, 122, 122);
+            font-size:$textoFooter;
+            font-family: $monserrat;
+            font-weight: bold;
+            border-bottom: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: rgb(124, 122, 122);
+        }
+        h5{
+            text-decoration: none;
+            color: $colorBlanco;
+            font-size:$textoFooter;
+            font-family: $monserrat;
+            
+            a{
+                text-decoration: none;
+                color: $colorBlanco;
+                font-size:$textoFooter;
+                font-family: $monserrat;
+                } 
+        }        
+    }
+
+    &__contactos {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        width: 40vw;
+        
+        h3{
+            position: relative;
+            margin:4px;
+            text-decoration: none;
+            color: rgb(124, 122, 122);
+            font-size:$textoFooter;
+            font-family: $monserrat;
+            font-weight: bold;
+            border-bottom: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: rgb(124, 122, 122);
+        }
+
+        h4{
+            margin:4px;
+            text-decoration: none;
+            color: $colorBlanco;
+            font-size:$textoFooter;
+            font-family: $monserrat;
+            font-weight: bold;
+        }
+        h5{
+            margin:4px;
+            text-decoration: none;
+            color: $colorBlanco;
+            font-size:$textoFooter;
+            font-family: $monserrat;
+            font-weight: lighter;
+            
+            a{
+                margin:4px;
+                text-decoration: none;
+                color: $colorBlanco;
+                font-size:$textoFooter;
+                font-family: $monserrat;
+                font-weight: lighter;
+                } 
+
+            i{
+                visibility:visible;
+                margin-right: 5px;
+            }
+        }   
+
+        h6{
+            margin:4px 4px 4px 20px;
+            text-decoration: none;
+            color: $colorBlanco;
+            font-size:$textoFooter;
+            font-family: $monserrat;
+            font-weight: lighter;
+            
+            a{
+                margin:4px 4px 4px 20px;
+                text-decoration: none;
+                color: $colorBlanco;
+                font-size:$textoFooter;
+                font-family: $monserrat;
+                font-weight: lighter;
+                } 
+            
+            i{
+                visibility: visible;
+                margin-right: 5px;
+            }
+        } 
+
+        &__contenedor {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 15px;
+            text-align: center;
+            
+            &__andres {
+                display: flex;
+                flex-direction: column;
+            } 
+    
+            &__florencia {
+                display: flex;
+                flex-direction: column;
+            }  
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .footer {
+    
+        &__ubicacion {
+    
+            h3{
+            margin: 0;
+            padding: 0;
+            font-size:12px;
+            }
+
+            h5{
+            margin: 0;
+            padding: 0;
+            font-size:12px;
+                a{
+                margin: 0;
+                padding: 0;
+                font-size:12px;
+                } 
+            }        
+        }
+    
+        &__contactos {
+            
+            h3{
+            font-size:12px;
+            margin: 0;
+            padding: 0;
+             }
+    
+            h4{
+            margin: 0;
+            padding: 0;
+            font-size:12px;
+            }
+            h5{
+            margin: 0;
+            padding: 0;
+            font-size:12px;
+                
+                a{
+            margin: 0;
+            padding: 0;
+            font-size:12px;
+        }               
+            i{
+                visibility:visible;
+                margin-right: 5px;
+            }
+            }   
+    
+            h6{
+            font-size:12px;
+                
+                a{
+            font-size:12px;
+             
+                
+                i{
+            visibility: hidden;
+            }
+             }
+            } 
+    
+            &__contenedor {
+                &__andres {
+                font-size:12px;
+              } 
+        
+                &__florencia {
+            font-size:12px;
+        }  
+            }
+        }
+    }
+}
+
+@media (max-width: 710px) {
+    .footer {
+    margin: 0;
+        &__ubicacion {
+            margin: 0;
+            justify-content: center;
+            h3{
+            font-size:10px;
+            margin: 2px;
+            padding: 0;
+            }
+
+            h5{
+            font-size:10px;
+            margin: 2px;
+            padding: 0;
+                a{
+                margin: 2px;
+                padding: 0;
+                font-size:10px;
+                } 
+            }        
+        }
+    
+        &__contactos {
+            justify-content: center;
+            margin: 0;
+            h3{
+            margin: 2px;
+            padding: 0;
+            font-size:10px;
+             }
+    
+            h4{
+            margin: 2px;
+            padding: 0;
+            font-size:10px;
+            }
+            h5{
+            margin: 2px;
+            padding: 0;
+            font-size:10px;
+                
+                a{
+            padding: 0;
+            margin: 2px;
+            font-size:10px;
+            } 
+    
+                i{
+                visibility: hidden;
+                position: relative;
+             }
+            }   
+    
+            h6{
+            margin: 2px;
+            padding: 0;
+            font-size:10px;
+                
+                a{
+                margin: 2px;
+                padding: 0;
+                font-size:10px;
+                } 
+                
+              
+            } 
+    
+            &__contenedor {
+                &__andres {
+                font-size:10px;
+              } 
+        
+                &__florencia {
+            font-size:10px;
+        }  
+            }
+        }
+    }
+}

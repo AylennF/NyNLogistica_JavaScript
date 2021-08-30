@@ -1,0 +1,72 @@
+$colorAzul:rgb(4, 49, 145);
+$colorAzulTitulos:rgb(2, 7, 82);
+$colorCeleste:#4668a7  ;
+$colorAzulTarjetas:rgb(4, 49, 145);
+$colorAzulRGBA:rgba(0, 9, 78, 0.425);
+$colorAzulRGBA2:rgba(14, 18, 85, 0.753);
+$colorAmarillo:rgba(253, 200, 131, 0.932);
+$colorBlanco:rgb(240, 240, 240);
+$colorNegroFooter:rgb(17, 17, 17);
+$colorNegro:black;
+$colorbg:rgba(170, 178, 192, 0.705);
+$colorbgObj:rgba(233, 236, 245, 0.863);
+$colorHover:rgb(200, 214, 228);
+
+
+$monserrat:'Montserrat', sans-serif;
+$roboto:'Roboto Slab', serif;
+$staatliches:'Staatliches', cursive;
+
+//MOBILE
+$fsMobile:14px;
+$paddingMobile:12px;
+  $nMobile:40px;
+  $andpersandMobile:33px;
+  $comercioMobile:15px;
+  $exteriorMobile:19px;
+$h2Mobile:25px;
+$h3Mobile:15px;
+$articleMobile:10px;
+$nFooterMobile:18px;
+  $anpersandFMobile:13px;
+  $comercioFMobile:14px;
+  $textoFooter:14px;
+
+
+//TABLET
+$fsTablet:14px;
+$paddingTablet:12px;
+$nTablet:70px;
+$andpersandTablet:40px;
+$comercioTablet:30px;
+$exteriorTablet:40px;
+$h1Tablet:30px;
+$h2Tablet:25px;
+$h3Tablet:20px;
+$articleTablet:17px;
+
+//DESKTOP
+$nDesk:90px;
+$textoDesk:26px;
+$textoGrandeDesk:50px;
+$comercioDesk:35px;
+$exteriorDesk:45px;
+$h1Desk:40px;
+$h2Desk:30px;
+$h3Desk:25px;
+$h4Desk:20px;
+$articleDesk:20px;
+$articleADesk:20px;
+$btnTam:16px;
+$nFooter:22px;
+  $anpersandFMobile:13px;
+  $comercioFMobile:14px;
+  $textoFooter:14px;
+
+
+  #fondo {
+    background-color:$colorbg;
+    margin:0;
+    padding:0;
+    width: auto;
+    }

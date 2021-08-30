@@ -1,0 +1,28 @@
+@keyframes efecto_cabecera {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes efecto_menu {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes efecto_contacto{
+    0% {opacity: 0; width: 0%;}
+    50% {opacity: 0; width: 50%;}
+    100%{opacity: 1; width: 100%;}
+}
+
+@keyframes efecto_tarjeta {
+    0% {opacity: 0; width: 0%;}
+    50% {opacity: 0; width: 100px;}
+    100%{opacity: 1; width: 30%;}
+}
+
+@keyframes efecto_contactanos {
+    0% {opacity: 0;}
+    50% {opacity: 1; width: 100vw;}
+    100%{opacity: 1; width: 70vw;}
+}

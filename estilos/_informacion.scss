@@ -1,0 +1,339 @@
+ .infoInteres {
+  #azul{
+    h2 a{
+    text-decoration: none;
+    color:$colorAzul;
+    font-size:$h2Desk;
+    font-family:$roboto;
+    }
+    
+    article{
+      color:$colorNegro;
+      font-size:$articleDesk;
+      font-family:$monserrat;
+      text-align: justify;
+
+      span{
+        font-style: italic;
+      }
+    }
+  }
+
+  #amarillo {
+    h2 a{
+      text-decoration: none;
+      color:$colorAmarillo;
+      font-size:$h2Desk;
+      font-family:$roboto;
+    }
+    article {
+      color:$colorBlanco;
+      font-size:$articleDesk;
+      font-family:$monserrat;
+      text-align: justify;
+     
+      span{
+        font-style: italic;
+      }
+    }
+}
+
+.gridHisopado { 
+    display: grid;
+    grid-template-areas:
+    "imgHisopado txtHisopado"
+    ;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows:100%;
+    grid-template-columns:1fr 1fr;
+    column-gap:0;
+    row-gap: 0;
+    padding:0;
+    margin: 0;
+    background-color: $colorAzul;
+
+    .imgHisopado {
+      grid-area: imgHisopado;
+      img {width:100%;}
+    }
+
+    .txtHisopado {
+      grid-area: txtHisopado;
+      align-self: center;
+      padding:20px;
+    }
+  }
+
+
+.gridDeclaracion { 
+  display: grid;
+  grid-template-areas:
+  "txtDeclaracion imgDeclaracion"
+  ;
+  justify-content: center;
+  text-align: center;
+  grid-template-rows:100%;
+  grid-template-columns:1fr 1fr;
+  padding:0;
+  margin: 0;
+  background-color: $colorAmarillo;
+
+  .imgDeclaracion {
+    grid-area: imgDeclaracion;
+    img {width:100%;}
+  }
+  .txtDeclaracion {
+    align-self: center;
+    padding:20px;
+    grid-area: txtDeclaracion;
+  }
+}
+
+.gridApplus { 
+  display: grid;
+  grid-template-areas:
+  "imgApplus txtApplus"
+  ;
+  justify-content: center;
+  text-align: center;
+  grid-template-rows:100%;
+  grid-template-columns:1fr 1fr;
+  padding:0;
+  margin: 0;
+  background-color: $colorAzul;
+
+  .imgApplus {
+    grid-area: imgApplus;
+    img {width:100%;}
+  }
+  .txtApplus {
+    align-self: center;
+    padding:20px;
+    grid-area: txtApplus;
+  }
+}
+
+.gridTarifa { 
+  display: grid;
+  grid-template-areas:
+  "txtTarifa imgTarifa"
+  ;
+  justify-content: center;
+  text-align: center;
+  grid-template-rows:100%;
+  grid-template-columns:1fr 1fr;
+  padding:0;
+  margin: 0;
+  background-color: $colorAmarillo;
+
+  .imgTarifa {
+    grid-area: imgTarifa;
+    img {width:100%;}
+  }
+  .txtTarifa {
+    align-self: center;
+    padding:20px;
+    grid-area: txtTarifa;
+  }
+}
+
+.gridMercancia { 
+  display: grid;
+  grid-template-areas:
+  "imgMercancia txtMercancia"
+  ;
+  justify-content: center;
+  text-align: center;
+  grid-template-rows:100%;
+  grid-template-columns:1fr 1fr;
+  padding:0;
+  margin: 0;
+  background-color: $colorAzul;
+
+  .imgMercancia {
+    grid-area: imgMercancia;
+    img {width:100%;}
+  }
+  .txtMercancia {
+    align-self: center;
+    padding:20px;
+    grid-area: txtMercancia;
+  }
+}
+ }
+
+@media (max-width: 935px) {
+  .infoInteres {
+    #azul{
+      h2 a{
+      font-size:$h2Tablet;
+      }
+      
+      article{
+        font-size:$articleTablet;
+      }
+    }
+  
+    #amarillo {
+      h2 a{
+        font-size:$h2Tablet;
+      }
+      article {
+        font-size:$articleTablet;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .infoInteres {
+    #azul{
+      h2 a{
+      font-size:$nFooterMobile;
+      }
+      
+      article{
+        font-size:$textoFooter;
+      }
+    }
+  
+    #amarillo {
+      h2 a{
+        font-size:$nFooterMobile;
+      }
+      article {
+        font-size:$textoFooter;
+      }
+  }
+   }
+}
+
+@media (max-width: 680px) {
+  .infoInteres {
+    #azul{
+      h2 a{
+        font-size:$textoFooter;
+        padding: 0;
+        margin:0;
+      }
+      
+      article{
+        font-size:$articleMobile;
+      }
+    }
+  
+    #amarillo {
+      h2 a{
+        padding: 0;
+        margin:0;
+        font-size:$textoFooter;
+      }
+      article {
+        font-size:$articleMobile;
+      }
+  }
+   }
+}
+
+@media (max-width: 570px) {
+  .infoInteres {
+    #azul{
+      h2 a{
+        font-size:$textoFooter;
+        padding: 0;
+        margin:0;
+      }
+      
+      article{
+        font-size:$articleMobile;
+      }
+    }
+  
+    #amarillo {
+      h2 a{
+        padding: 0;
+        margin:0;
+        font-size:$textoFooter;
+      }
+      article {
+        font-size:$articleMobile;
+      }
+  }
+
+  .gridHisopado { 
+    grid-template-columns:0fr 2fr;
+    .imgHisopado {
+      img {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+      }
+    }
+  
+    .txtHisopado {
+      align-self: center;
+      padding:20px;
+    }
+  }
+  
+  
+  .gridDeclaracion { 
+    grid-template-columns:2fr 0fr;
+  .imgDeclaracion {
+    img {
+      visibility: hidden;
+      height: 0px;
+      width: 0px;
+    }
+  }
+  .txtDeclaracion {
+    align-self: center;
+    padding:20px;
+  }
+  }
+  
+  .gridApplus { 
+    grid-template-columns:0fr 2fr;
+    .imgApplus {
+      img {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+  }
+  .txtApplus {
+    padding:20px;
+  }
+  }
+  
+  .gridTarifa { 
+    grid-template-columns:2fr 0fr;
+  .imgTarifa {
+    img {
+      visibility: hidden;
+      height: 0px;
+      width: 0px;
+    }
+  }
+  .txtTarifa {
+    padding:20px;
+  }
+  }
+  
+  .gridMercancia { 
+    grid-template-columns:0fr 2fr;
+  .imgMercancia {
+    img {
+      visibility: hidden;
+      height: 0px;
+      width: 0px;
+    }
+  }
+  .txtMercancia {
+    padding:20px;
+  }
+  }
+   }
+
+}

@@ -1,0 +1,259 @@
+.flexFaq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: $colorAzul;
+
+    h3 {
+        color:$colorNegro;
+        font-size: $h3Desk;
+        font-family:$roboto;
+        margin: 0;
+    }   
+    article {
+        font-size:$articleDesk;
+        font-weight:light;
+        font-family: $monserrat;
+        text-align: center;
+        margin-bottom: 4px;
+    }
+
+    .tarjeta {
+        height:40px;
+        width: 90vw;
+        justify-self: center;
+        align-self: center;
+        background-color: $colorbgObj;
+        margin-bottom: 1vh;
+        padding-top: 5px;
+  
+        transition: all 0.2s ease-in-out;
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: rgba(134, 155, 248, 0.13);
+      
+        .contenido {
+            visibility: hidden;
+        }
+    }
+
+    .tarjeta:hover {
+        height: 27%;
+        padding-bottom: 0.5vh;
+        transition: all 0.2s ease-in-out;
+
+        .contenido{
+            transition: all 0.3s ease-in-out;
+            visibility: visible;
+          }
+    }
+}
+
+.flexMasInfo{
+    display: flex;
+    background-image: url("../Imagenes/camiones2.jpg"); 
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    margin:0;
+    padding:100px;
+
+    h3 {
+        margin:0;
+        color:$colorAzul;
+        font-size: $h1Desk;
+        font-family:$staatliches;
+        letter-spacing: 5px;
+    } 
+    
+    .boton{
+        transition: all 0.4s;
+        align-self: center;
+        width: 200px;
+        height: 100%;
+        margin-left:50% ;
+        padding:0;
+        background-color: $colorAzul;  
+        text-align: center;
+
+        a{
+            padding:center;
+            margin:0;
+            color:$colorBlanco;
+            text-decoration: none;
+            font-size:$h4Desk;
+            font-weight:bold;
+            font-family: $monserrat;
+        }
+    }
+
+    .boton:hover{
+        transition: all 0.3s;
+        background-color: $colorHover;  
+
+        a{
+        transition: all 0.3s;
+        color:$colorAzul;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .flexFaq {
+        text-align: center;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+
+        h3 {
+            font-size: $h3Tablet;
+        }   
+        article {
+            font-size:$articleTablet;
+            margin-bottom: 4px;
+        }
+
+        .tarjeta {
+            height:40px;
+            width: 90vw;
+            margin-bottom: 1vh;
+            padding-top: 5px;
+            transition: all 0.2s ease-out;
+        
+            .contenido {
+                visibility: hidden;
+            }
+        }
+
+        .tarjeta:hover {
+            height: 27%;
+            padding-bottom: 0.5vh;
+            transition: all 0.2s ease-in-out;
+
+            .contenido{
+                visibility: visible;
+            }
+        }
+    }
+
+    .flexMasInfo{
+        margin:0;
+        padding:100px;
+
+        h3 {
+            font-size: $h1Tablet;
+        } 
+
+        h4 {
+            font-size: $articleTablet;
+        } 
+    }   
+}
+
+@media (max-width: 800px) {
+    .flexFaq {
+        
+    .tarjeta {
+        height:30px;
+    }
+        h3 {
+            font-size:17px;
+        }   
+        article {
+            font-size:$textoFooter;
+        }
+    }
+
+    .flexMasInfo{
+
+        h3 {
+            font-size: $h2Mobile;
+        } 
+
+        h4 {
+            font-size: $textoFooter;
+        } 
+    }   
+}
+
+@media (max-width: 675px) {
+    .flexFaq {
+        
+    .tarjeta {
+        height:30px;
+    }
+        h3 {
+            font-size:$h3Mobile;
+        }   
+        article {
+            font-size:$textoFooter;
+        }
+    }
+
+    .flexMasInfo{
+
+        h3 {
+            font-size: $h2Mobile;
+        } 
+
+        h4 {
+            font-size: $textoFooter;
+        } 
+    }   
+}
+
+@media (max-width: 585px) {
+    .flexFaq {
+        
+    .tarjeta {
+        height:20px;
+    }
+        h3 {
+            font-size:$paddingMobile;
+        }   
+        article {
+            font-size:$articleMobile;
+        }
+    }
+
+    .flexMasInfo{
+
+        h3 {
+            font-size: $h2Mobile;
+        } 
+
+        h4 {
+            font-size: $textoFooter;
+        } 
+    }   
+}
+
+@media (max-width: 475px) {
+    .flexFaq {
+        
+    .tarjeta {
+        height:15px;
+    }
+        h3 {
+            font-size:$articleMobile;
+        }   
+        article {
+            font-size:$articleMobile;
+        }
+    }
+
+    .flexMasInfo{
+
+        h3 {
+            font-size: $h2Mobile;
+        } 
+
+        h4 {
+          padding: 4px;
+            font-size: $articleMobile;
+        } 
+    }   
+}
