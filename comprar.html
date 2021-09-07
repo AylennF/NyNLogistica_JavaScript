@@ -78,16 +78,15 @@
     <section class="sectionInfoContacto">
       <div class="divContacto">
         <h2>INFORMACIÓN DE CONTACTO</h2>
-        <form>
+        <form id="form">
           <label for="name" class="labels"> Nombre: </label>
-          <input type="text" name="nombre" id="nombre">
+          <input type="text" name="nombre" id="nombre">     
           
           <label for="apellido" class="labels"> Apellido: </label>
-          <input type="text" name="apellido" id="apellido">
+          <input type="text" name="apellido" id="apellido">          
           
           <label for="email" class="labels"> Email: </label>
-          <input type="email" name="email" id="email">
-                   
+          <input type="email" name="email" id="email">   
           
           <div class="boton">    
             <input type="submit" id="botonSiguiente" value="Siguiente">
@@ -96,10 +95,10 @@
         </form>
       </div>
       </section>
+
       <section class="seccionCompraServicio">
-        <div >
-            <h2>SOLICITAR UN SERVICIO</h2>
-            <button id="btnComprar">COMPRAR</button>
+        <div>
+            <h2 id="solicitar">SOLICITAR UN SERVICIO</h2>
         <div class="compraServicio">
             <div>
                 <h3>Logistica</h3>
@@ -131,6 +130,7 @@
             </div>
         </div>
 
-    <script src="JS/main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="JS/main.js"></script>
     </body>
-    </html>
+</html>

@@ -1,4 +1,6 @@
 // INICIALIZACIONES --------------------------------------------------------------------------------//
+$(".seccionCompraServicio").hide();
+
 b=0;
 id=0;
 total=0;
@@ -28,6 +30,22 @@ let compraComExterior =document.getElementById("Comercio");
 let compraOtros =document.getElementById("Otros");
 
 // FUNCIONES ----------------------------------------------------------------------------------------------//
+
+function borrarBotones() {
+  $("#btnComprar").remove();
+  $("#btnLogistica").remove();
+  $("#btnHabilitaciones").remove();
+  $("#btnComExterior").remove();
+  $("#btnOtros").remove();
+}
+
+function borrarComprados() {
+  $(".tituloBoleta").remove();
+  $(".divBoleta").remove();
+  $(".seccionesTotalBoleta").remove();
+  $(".seccionesBoleta").remove();
+}
+
 function borrarValores(){
   tam = servicioComprado.length;
   for (let i=0; i<tam; i++){
@@ -110,19 +128,25 @@ var ServiciosPersona = [];
 botonLogistica.onclick = () => { 
   opcionClick=1,
   respuestaClick(opcionClick);
+  compra();
 }
 
 botonHabilitaciones.onclick = () => { 
   opcionClick=2,
   respuestaClick(opcionClick);
+  compra();
 }
+
 botonComExterior.onclick = () => { 
   opcionClick=3,
   respuestaClick(opcionClick);
+  compra();
 }
+
 botonOtros.onclick = () => { 
   opcionClick=4,
   respuestaClick(opcionClick);
+  compra();
 }
 
 function respuestaClick(op) {
@@ -162,17 +186,36 @@ function respuestaClick(op) {
 
 const arrayContenido = ["Nombre", "Apellido", "Email"]; 
 let botonComprar = document.getElementById("btnComprar");
-compro=0;
+compro = 0;
 
-botonComprar.onclick = () => {
-  localStorage.clear();
-  if (compro == 0) {
+function compra(){
+  if (compro == 0){
+    {localStorage.clear();}
     mostrarTitulo()
     mostrarCompra();
     mostrarTotal();
-    compro=1;
-  } else {
-    mostrarCompraSobreescribir();
+    compro = 1;
+  } 
+  
+  else {
+    borrarComprados();
+    mostrarTitulo()
+    mostrarCompra();
+    mostrarTotal();
   }
-}  
+}   
 
+$("#form").submit(function (e) {
+  e.preventDefault();
+  let hijosFormulario = $(e.target).children();
+  
+  $(".seccionCompraServicio").show();
+  $(".sectionInfoContacto").hide();
+  
+  nombre=hijosFormulario[1].value;
+  apellido=hijosFormulario[3].value;
+
+  $("<h3 class='usuario'>Usuario activo: <span id='usuario'>"+ nombre + " " +apellido +"</span></h3>").insertAfter("#solicitar");
+
+  
+});

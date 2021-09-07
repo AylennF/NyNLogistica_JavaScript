@@ -3,7 +3,24 @@
     justify-content: center;
     text-align: center;
     flex-direction: row;
-    margin: 20px 0 40px 0;
+    padding: 20px 0 40px 0;
+    background-color:$colorAzul;
+
+    .usuario {
+      text-align: center;
+      color:$colorBlanco;
+      font-family: $monserrat;
+      font-weight: 300;
+      font-size:13px;
+
+      #usuario{
+        text-align: center;
+        color:$colorBlanco;
+        font-family: $monserrat;
+        font-weight: normal;
+        font-size:17px;
+      }
+    }
 
     #btnComprar {
         align-self: center;
@@ -25,7 +42,7 @@
 
     h2 {
       text-align: center;
-      color:$colorAzul;
+      color:$colorBlanco;
       font-family: $monserrat;
       font-size:30px;
     }
