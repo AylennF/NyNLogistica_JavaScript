@@ -1,5 +1,6 @@
 // INICIALIZACIONES --------------------------------------------------------------------------------//
 $(".seccionCompraServicio").hide();
+{localStorage.clear();}
 
 b=0;
 id=0;
@@ -31,16 +32,10 @@ let compraOtros =document.getElementById("Otros");
 
 // FUNCIONES ----------------------------------------------------------------------------------------------//
 
-function borrarBotones() {
-  $("#btnComprar").remove();
-  $("#btnLogistica").remove();
-  $("#btnHabilitaciones").remove();
-  $("#btnComExterior").remove();
-  $("#btnOtros").remove();
-}
-
 function borrarComprados() {
   $(".tituloBoleta").remove();
+  $("section").remove();
+  $(".imprimir").remove();
   $(".divBoleta").remove();
   $(".seccionesTotalBoleta").remove();
   $(".seccionesBoleta").remove();
@@ -57,6 +52,7 @@ servicioComprado.splice(0,tam);
 function mostrarTitulo(){
   let titulo = document.createElement("section");
     titulo.innerHTML = `<h3 class="tituloBoleta">DETALLES DE COMPRA</h3>
+    <div class='imprimir'><div><h4><a href="boleta.html">IMPRIMIR COMPROBANTE</a></h4></div></div>
     <div class="seccionesBoleta">
       <h4>CANTIDAD</h4>
       <h4>DETALLE</h4>
@@ -80,13 +76,15 @@ function mostrarCompraSobreescribir(){
 }
 
 function mostrarCompra(){
+  j=0;
   tam=servicioComprado.length;
   for (let i=0; i<tam; i++){
     i=i+2;
+    j=j+1;
     if (servicioComprado[i-2] != 0){      
-      localStorage.setItem("Precio"+i, JSON.stringify(servicioComprado[i]));
-      localStorage.setItem("Servicio"+i, JSON.stringify(servicioComprado[i-1]));
-      localStorage.setItem("Cantidad"+i, JSON.stringify(servicioComprado[i-2]));
+      localStorage.setItem("Precio"+j, JSON.stringify(servicioComprado[i]));
+      localStorage.setItem("Servicio"+j, JSON.stringify(servicioComprado[i-1]));
+      localStorage.setItem("Cantidad"+j, JSON.stringify(servicioComprado[i-2]));
 
       let compra = document.createElement("section");
         compra.innerHTML =
@@ -190,7 +188,6 @@ compro = 0;
 
 function compra(){
   if (compro == 0){
-    {localStorage.clear();}
     mostrarTitulo()
     mostrarCompra();
     mostrarTotal();
@@ -209,13 +206,15 @@ $("#form").submit(function (e) {
   e.preventDefault();
   let hijosFormulario = $(e.target).children();
   
-  $(".seccionCompraServicio").show();
-  $(".sectionInfoContacto").hide();
+  localStorage.setItem('Nombre', JSON.stringify(hijosFormulario[1].value));
+  localStorage.setItem('Apellido', JSON.stringify(hijosFormulario[3].value));
+  localStorage.setItem('Correo', JSON.stringify(hijosFormulario[5].value));
+
+  $(".sectionInfoContacto").slideToggle();
+  $(".seccionCompraServicio").fadeIn();
   
   nombre=hijosFormulario[1].value;
   apellido=hijosFormulario[3].value;
 
   $("<h3 class='usuario'>Usuario activo: <span id='usuario'>"+ nombre + " " +apellido +"</span></h3>").insertAfter("#solicitar");
-
-  
 });

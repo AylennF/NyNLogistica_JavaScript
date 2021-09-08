@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagenes/favicon.ico">
+    <link rel="stylesheet" href="estilos/main.css" \>
+    <title>Comprar servicio | NyN</title>
+
+<!-- FUENTE 1 | La uso en el menu -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Staatliches&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- FUENTE 2 | La uso para la N del logo -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- FUENTE 3 | la uso para la palabra "comercio" -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- FUENTE 4 | La uso para textos -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+  rel="stylesheet"
+/>
+</head>
+
+<body id="bgBoleta">
+
+  <a href="comprar.html">
+  <div id="img">
+      <img
+      src="Imagenes/logo-min.png"
+      alt="logo"
+    />
+  </div>
+  </a>
+    <div class="encabezadoRecibo">
+      <img
+      src="Imagenes/logo-min.png"
+      alt="logo"
+      id="imgHide"
+    />
+      <div class="encabezadoOtros">
+          <h3 id="fecha">Fecha:</h3>
+          <h3 id="usuario">Usuario:</h3>
+        </div>
+        
+    </div>
+    
+    <div>
+    <h2>Comprobante de reserva</h2>
+
+    <div class="turnoRecibo">
+        <table>
+          <tr id="tablaTurnos">
+            <td>Turno</td>
+            <td>Fecha</td>
+            <td>Horario</td>
+          </tr>
+          <tr id="datosTurno">
+            <!-- <td id="turno"></td>
+            <td id="fechaTurno"></td>
+            <td id="horarioTurno"></td> -->
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  <div>
+    <h2>Detalles de compra</h2>
+
+    <div class="turnoRecibo">
+        <table>
+          <tr id="tablaTurnos">
+            <td>Cantidad</td>
+            <td>Servicio</td>
+            <td>Precio</td>
+          </tr>
+          <tr id="datosRecibo">
+          </tr>
+        </table>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="JS/compra.js"></script>
+  </body>
+</html>

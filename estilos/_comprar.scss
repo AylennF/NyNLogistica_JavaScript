@@ -1,3 +1,6 @@
+#fondo2 {
+  background-color: $colorAzul;
+}
 .seccionCompraServicio {
     display: flex;
     justify-content: center;
@@ -93,9 +96,38 @@
 
 .tituloBoleta {
   text-align: center;
-  color:$colorAzul;
+  color:$colorBlanco;
   font-family: $monserrat;
   font-size:30px;
+}
+
+.imprimir{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+
+  div{
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    padding:1px;
+    width: 20vw;
+    margin: 5px 0;
+  
+    font-family: $monserrat;
+    color:$colorAzul;
+    background-color:white;
+    border-style: none;
+
+    h4{
+      a{
+        color:$colorAzul;
+        text-decoration: none;
+      }
+    }
+  }
+
 }
 
 .divBoleta {
