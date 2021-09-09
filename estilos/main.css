@@ -2215,7 +2215,7 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  background-color: rgba(233, 236, 245, 0.863);
+  background-color: #e9ecf5;
   margin-bottom: 1vh;
   padding-top: 5px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3126,7 +3126,7 @@ a #img {
   text-align: center;
   position: absolute;
   width: 120px;
-  background-color: rgba(233, 236, 245, 0.863);
+  background-color: #e9ecf5;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

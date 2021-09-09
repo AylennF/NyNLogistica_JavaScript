@@ -1,5 +1,16 @@
 // INICIALIZACIONES --------------------------------------------------------------------------------//
 $(".seccionCompraServicio").hide();
+$(".seccionSeleccionFecha").hide();
+
+window.addEventListener('load', function () {
+$('.flexInicial__posicionamiento')
+.slideUp(1)
+.delay(100)
+.fadeIn(1000)
+.slideDown(1000)
+.delay(1000);
+})
+
 {localStorage.clear();}
 
 b=0;
@@ -18,6 +29,7 @@ preciologistico= 0;
 cantServicios = 0;
 servicioSeleccionado="";
 
+const meses = ["Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"];
 const servicioComprado = [];
 const ArrayPrecios = [400, 300, 500, 7000];
 let servicioLogistica = document.getElementById("Logistica");
@@ -211,6 +223,8 @@ $("#form").submit(function (e) {
   localStorage.setItem('Correo', JSON.stringify(hijosFormulario[5].value));
 
   $(".sectionInfoContacto").slideToggle();
+  $(".seccionSeleccionFecha").fadeIn();
+  // cargarListas();
   $(".seccionCompraServicio").fadeIn();
   
   nombre=hijosFormulario[1].value;
@@ -218,3 +232,35 @@ $("#form").submit(function (e) {
 
   $("<h3 class='usuario'>Usuario activo: <span id='usuario'>"+ nombre + " " +apellido +"</span></h3>").insertAfter("#solicitar");
 });
+
+// TODAVIA NO VOY A IMPLEMENTAR ESTO
+
+// function cargarListas(){
+//   // carga los meses
+//     let mostrarMeses = document.createElement("select");
+//     for (let i=1; i<=12; i++){
+//       mostrarMeses.innerHTML += `
+//     <option>`+meses[i-1]+`</option>`
+//     document.body.appendChild(mostrarMeses);  
+//     }
+
+    
+//     // $(select).addEventListener('change',
+//     // function(){
+//     //   var opcionMes = this.options[select.selectedIndex];
+//     //   console.log(selectedOption.value + ': ' + selectedOption.text);
+//     // });
+
+//     // $(select).submit(function (e) {
+//     //   e.preventDefault();
+//     //   let hijosFormulario = $(e.target).children();
+
+
+//     // carga los dias
+//     let mostrarDias = document.createElement("select");
+//     for (let i=1; i<=31; i++){
+//       mostrarDias.innerHTML += `<option>${i}</option>`
+//       document.body.appendChild(mostrarDias);  
+//     }
+//   // });
+// }

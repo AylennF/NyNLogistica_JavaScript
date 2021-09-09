@@ -46,7 +46,6 @@ function mostrarNombre(){
     } else{
         console.log("xd");
     }
-
 }
 
 function mostrarDatosTurno(){
@@ -57,7 +56,6 @@ function mostrarDatosTurno(){
             var turno = localStorage.getItem("Servicio"+i);
             var fTurno = localStorage.getItem("Cantidad"+i);
             var hTurno = localStorage.getItem("Precio"+i);
-            // ver para cuando no hay nada en el localStorage
             tamT=turno.length-2;
             $("<tr id='datosReciboTr'><td id='turno'>"+fTurno+"</td><td id='fechaTurno'>"+turno.substr(1,tamT)+"</td><td id='horarioTurno'>U$S "+hTurno+"</td></tr>").insertAfter("#datosRecibo");
         }
