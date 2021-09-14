@@ -3058,6 +3058,12 @@ body {
   width: 49%;
 }
 
+.ajax #ajax {
+  color: #f0f0f0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
 .estiloForm, .sectionContacto .divContacto input, .sectionContacto .divContacto textarea, .seccionCompraServicio .compraServicio input, .sectionInfoContacto .divContacto input {
   background-color: rgba(124, 149, 196, 0.637);
   border-style: solid;

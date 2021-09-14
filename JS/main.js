@@ -142,7 +142,7 @@ let botonOtros = document.getElementById("btnOtros");
 var ServiciosPersona = [];
 
 $(document).ready(function () {
-  $('.compraServicio').click(function () {
+  $('.ajax').click(function () {
     $.get("datos.txt", function (data) {
       $("#ajax").html(data);
     });
