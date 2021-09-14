@@ -63,7 +63,7 @@
 .nav a:hover {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  color: #c8d6e4;
+  color: #a6bbcf;
   display: block;
   background-color: #b1c4d436;
 }
@@ -2292,7 +2292,7 @@ body {
 .flexMasInfo .boton:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #c8d6e4;
+  background-color: #a6bbcf;
 }
 
 .flexMasInfo .boton:hover a {
@@ -2882,6 +2882,10 @@ body {
   text-decoration: none;
 }
 
+.imprimir div p {
+  color: black;
+}
+
 .divBoleta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2931,7 +2935,7 @@ body {
   width: 80vw;
   margin: 10px 7vw;
   padding: 0 3vw;
-  background-color: #c8d6e4;
+  background-color: #a6bbcf;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.418);
@@ -2956,7 +2960,7 @@ body {
   width: 80vw;
   margin: 10px 7vw;
   padding: 0 3vw;
-  background-color: #c8d6e4;
+  background-color: #a6bbcf;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.418);
@@ -3063,6 +3067,33 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+p #pSelect {
+  margin-top: 70px;
+  margin-left: 45%;
+  color: #f0f0f0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+select {
+  border-style: none;
+  background-color: #f0f0f0;
+  margin-left: 43%;
+  margin-bottom: 70px;
+  height: 25px;
+  width: 20%;
+  text-align: center;
+  color: #043191;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+select:focus {
+  background-color: #a6bbcf;
+  font-weight: bold;
+  color: black;
+}
+
 .encabezadoRecibo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3081,7 +3112,7 @@ body {
 .encabezadoRecibo .encabezadoOtros {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #c8d6e4;
+  border-bottom-color: #a6bbcf;
   width: 100vw;
   margin: 30px 0px 4px 0;
   padding-right: 30px;
@@ -3194,9 +3225,5 @@ h2 {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #043191;
-}
-
-div {
-  margin-bottom: 70px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -126,6 +126,9 @@
         text-decoration: none;
       }
     }
+    p{
+      color:black;
+    }
   }
 
 }
@@ -268,4 +271,35 @@
   border-width: 0.5px;
   border-color: rgba(255, 255, 255, 0.596);
   font-family:$monserrat;
+}
+
+p{
+  #pSelect{
+    margin-top: 70px;
+    margin-left: 45%;
+    color:$colorBlanco;
+    font-family: $monserrat;
+    font-weight: bold;
+  }
+}
+
+select{
+  border-style: none;
+  background-color: $colorBlanco;
+  margin-left: 43%;
+  margin-bottom: 70px;
+  height: 25px;
+  width: 20%;
+
+  text-align: center;
+
+  color:$colorAzul;
+  font-family: $monserrat;
+  font-weight: bold;
+}
+
+select:focus {
+  background-color: $colorHover;
+  font-weight: bold;
+  color: $colorNegro;
 }

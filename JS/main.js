@@ -13,6 +13,7 @@ $('.flexInicial__posicionamiento')
 
 {localStorage.clear();}
 
+a=0;
 b=0;
 id=0;
 total=0;
@@ -29,9 +30,14 @@ preciologistico= 0;
 cantServicios = 0;
 servicioSeleccionado="";
 
-const meses = ["Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"];
+const meses = ["Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 const servicioComprado = [];
 const ArrayPrecios = [400, 300, 500, 7000];
+
+let mostrarDias = document.createElement("select");
+let mostrarHora = document.createElement("select");
+let pHora = document.createElement("p");
+
 let servicioLogistica = document.getElementById("Logistica");
 let servicioHabilitaciones =document.getElementById("Habilitaciones2");
 let servicioComExterior =document.getElementById("ComExterior");
@@ -135,6 +141,14 @@ let botonComExterior = document.getElementById("btnComExterior");
 let botonOtros = document.getElementById("btnOtros");
 var ServiciosPersona = [];
 
+$(document).ready(function () {
+  $('.compraServicio').click(function () {
+    $.get("datos.txt", function (data) {
+      $("#ajax").innerHTML(data);
+    });
+  });
+});
+
 botonLogistica.onclick = () => { 
   opcionClick=1,
   respuestaClick(opcionClick);
@@ -221,46 +235,100 @@ $("#form").submit(function (e) {
   localStorage.setItem('Nombre', JSON.stringify(hijosFormulario[1].value));
   localStorage.setItem('Apellido', JSON.stringify(hijosFormulario[3].value));
   localStorage.setItem('Correo', JSON.stringify(hijosFormulario[5].value));
-
+  
   $(".sectionInfoContacto").slideToggle();
   $(".seccionSeleccionFecha").fadeIn();
-  // cargarListas();
-  $(".seccionCompraServicio").fadeIn();
-  
-  nombre=hijosFormulario[1].value;
-  apellido=hijosFormulario[3].value;
+ 
+  cargarListas();
 
-  $("<h3 class='usuario'>Usuario activo: <span id='usuario'>"+ nombre + " " +apellido +"</span></h3>").insertAfter("#solicitar");
+  mostrarHora.addEventListener('change', function(){
+    var opcionHora = mostrarHora.options[mostrarHora.selectedIndex].text
+    console.log(opcionHora);    
+    localStorage.setItem('Hora', JSON.stringify(opcionHora));
+
+    $(pHora).hide();
+    $(mostrarHora).hide();
+    $(".seccionCompraServicio").fadeIn();
+    
+    nombre=hijosFormulario[1].value;
+    apellido=hijosFormulario[3].value;
+    
+    $("<h3 class='usuario'>Usuario activo: <span id='usuario'>"+ nombre + " " +apellido +"</span></h3>").insertAfter("#solicitar");
+  }); 
+  
 });
 
-// TODAVIA NO VOY A IMPLEMENTAR ESTO
 
-// function cargarListas(){
-//   // carga los meses
-//     let mostrarMeses = document.createElement("select");
-//     for (let i=1; i<=12; i++){
-//       mostrarMeses.innerHTML += `
-//     <option>`+meses[i-1]+`</option>`
-//     document.body.appendChild(mostrarMeses);  
-//     }
+function cargarListas(){
+    // carga los meses y muestra el <p>
+    let pMes = document.createElement("p");
+    pMes.innerHTML += `<p id="pSelect">Seleccione mes: </p>`
+    document.body.appendChild(pMes);
 
-    
-//     // $(select).addEventListener('change',
-//     // function(){
-//     //   var opcionMes = this.options[select.selectedIndex];
-//     //   console.log(selectedOption.value + ': ' + selectedOption.text);
-//     // });
+    let mostrarMeses = document.createElement("select");
+    mostrarMeses.innerHTML += `
+      <option>Seleccione una opción</option>`
+      document.body.appendChild(mostrarMeses); 
 
-//     // $(select).submit(function (e) {
-//     //   e.preventDefault();
-//     //   let hijosFormulario = $(e.target).children();
+    for (let i=1; i<=12; i++){
+      mostrarMeses.innerHTML += `
+      <option>`+meses[i-1]+`</option>`
+      document.body.appendChild(mostrarMeses);  
+    }
+
+    mostrarMeses.addEventListener('change', function(){
+      var opcionMes = mostrarMeses.options[mostrarMeses.selectedIndex].text
+      console.log(opcionMes);
+      localStorage.setItem('Mes', JSON.stringify(opcionMes));
 
 
-//     // carga los dias
-//     let mostrarDias = document.createElement("select");
-//     for (let i=1; i<=31; i++){
-//       mostrarDias.innerHTML += `<option>${i}</option>`
-//       document.body.appendChild(mostrarDias);  
-//     }
-//   // });
-// }
+      switch (opcionMes){
+          case "Enero": case "Marzo": case "Mayo": case "Julio": case "Agosto": case "Octubre": case "Diciembre":
+            diasMes=31;
+          break;
+  
+          case "Febrero":
+            diasMes=28;
+          break;
+  
+          case "Abril": case "Junio": case "Septiembre": case "Noviembre":
+            diasMes=30;
+          break;
+      }
+
+      $(pMes).hide();
+      $(mostrarMeses).hide();
+
+      // carga los dias y muestra el <p>
+      let pDia = document.createElement("p");
+      pDia.innerHTML += `<p id="pSelect">Seleccione dia: </p>`
+      document.body.appendChild(pDia);  
+
+      for (let i=1; i<=diasMes; i++){
+        mostrarDias.innerHTML += `<option id="opcionesDias">${i}</option>`
+        document.body.appendChild(mostrarDias);  
+      }
+
+      mostrarDias.addEventListener('change', function(){
+        var opcionDia = mostrarDias.options[mostrarDias.selectedIndex].text
+        console.log(opcionDia);
+        localStorage.setItem('Dia', JSON.stringify(opcionDia));
+
+        
+        $(pDia).hide();
+        $(mostrarDias).hide();
+
+      // carga hora y muestra <p>
+        pHora.innerHTML += `<p id="pSelect">Seleccione hora: </p>`
+        document.body.appendChild(pHora); 
+
+        for (let i=7; i<=20; i++){
+          for (let min=0; min<6; min++){
+            mostrarHora.innerHTML += `<option id="opcionesHora">${i}:${min}0</option>`
+            document.body.appendChild(mostrarHora);  
+            min=min+2;
+          }
+        }
+      });  
+    });
+}
