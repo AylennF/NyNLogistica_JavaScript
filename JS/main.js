@@ -144,7 +144,7 @@ var ServiciosPersona = [];
 $(document).ready(function () {
   $('.compraServicio').click(function () {
     $.get("datos.txt", function (data) {
-      $("#ajax").innerHTML(data);
+      $("#ajax").html(data);
     });
   });
 });
