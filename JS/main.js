@@ -13,22 +13,22 @@ $('.flexInicial__posicionamiento')
 
 {localStorage.clear();}
 
-a=0;
-b=0;
-id=0;
-total=0;
-habilitaciones=0;
-comExterior=0;
-otros=0; 
-logistico= 0;
+let a=0;
+let b=0;
+let id=0;
+let total=0;
+let habilitaciones=0;
+let comExterior=0;
+let otros=0; 
+let logistico= 0;
 
-preciohabilitaciones=0;
-preciocomExterior=0;
-preciootros=0; 
-preciologistico= 0;
+let preciohabilitaciones=0;
+let preciocomExterior=0;
+let preciootros=0; 
+let preciologistico= 0;
 
-cantServicios = 0;
-servicioSeleccionado="";
+let cantServicios = 0;
+let servicioSeleccionado="";
 
 const meses = ["Enero", "Febrero", "Marzo", "Abril","Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 const servicioComprado = [];
@@ -94,6 +94,7 @@ function mostrarCompraSobreescribir(){
 }
 
 function mostrarCompra(){
+  total1=0;
   j=0;
   tam=servicioComprado.length;
   for (let i=0; i<tam; i++){
@@ -103,7 +104,7 @@ function mostrarCompra(){
       localStorage.setItem("Precio"+j, JSON.stringify(servicioComprado[i]));
       localStorage.setItem("Servicio"+j, JSON.stringify(servicioComprado[i-1]));
       localStorage.setItem("Cantidad"+j, JSON.stringify(servicioComprado[i-2]));
-
+      console.log(servicioComprado[i]);
       let compra = document.createElement("section");
         compra.innerHTML =
         `<div class="divBoleta">
@@ -113,10 +114,11 @@ function mostrarCompra(){
         </div>
         `
       document.body.appendChild(compra);
-      total=total+servicioComprado[i];
       b=b+1;
     }
-    }
+    total=total1+servicioComprado[i];
+    total1=total;
+  }
     localStorage.setItem("Total", JSON.stringify(total));
   }
 
@@ -141,13 +143,13 @@ let botonComExterior = document.getElementById("btnComExterior");
 let botonOtros = document.getElementById("btnOtros");
 var ServiciosPersona = [];
 
-$(document).ready(function () {
-  $('.ajax').click(function () {
-    $.get("datos.txt", function (data) {
-      $("#ajax").html(data);
-    });
-  });
-});
+// $(document).ready(function () {
+//   $(".ajax").click(function () {
+//     $.get("datos.txt", function (data) {
+//       $("#ajax").html(data);
+//     });
+//   });
+// });
 
 botonLogistica.onclick = () => { 
   opcionClick=1,
@@ -243,7 +245,6 @@ $("#form").submit(function (e) {
 
   mostrarHora.addEventListener('change', function(){
     var opcionHora = mostrarHora.options[mostrarHora.selectedIndex].text
-    console.log(opcionHora);    
     localStorage.setItem('Hora', JSON.stringify(opcionHora));
 
     $(pHora).hide();
@@ -266,19 +267,16 @@ function cargarListas(){
     document.body.appendChild(pMes);
 
     let mostrarMeses = document.createElement("select");
-    mostrarMeses.innerHTML += `
-      <option>Seleccione una opción</option>`
+    mostrarMeses.innerHTML += `<option>Seleccione un mes</option>`
       document.body.appendChild(mostrarMeses); 
 
     for (let i=1; i<=12; i++){
-      mostrarMeses.innerHTML += `
-      <option>`+meses[i-1]+`</option>`
+      mostrarMeses.innerHTML += `<option>`+ meses[i-1] +`</option>`
       document.body.appendChild(mostrarMeses);  
     }
 
     mostrarMeses.addEventListener('change', function(){
       var opcionMes = mostrarMeses.options[mostrarMeses.selectedIndex].text
-      console.log(opcionMes);
       localStorage.setItem('Mes', JSON.stringify(opcionMes));
 
 
@@ -304,6 +302,9 @@ function cargarListas(){
       pDia.innerHTML += `<p id="pSelect">Seleccione dia: </p>`
       document.body.appendChild(pDia);  
 
+      mostrarDias.innerHTML += `<option>Seleccione un día</option>`
+      document.body.appendChild(mostrarDias); 
+
       for (let i=1; i<=diasMes; i++){
         mostrarDias.innerHTML += `<option id="opcionesDias">${i}</option>`
         document.body.appendChild(mostrarDias);  
@@ -311,7 +312,6 @@ function cargarListas(){
 
       mostrarDias.addEventListener('change', function(){
         var opcionDia = mostrarDias.options[mostrarDias.selectedIndex].text
-        console.log(opcionDia);
         localStorage.setItem('Dia', JSON.stringify(opcionDia));
 
         
@@ -322,6 +322,9 @@ function cargarListas(){
         pHora.innerHTML += `<p id="pSelect">Seleccione hora: </p>`
         document.body.appendChild(pHora); 
 
+        mostrarHora.innerHTML += `<option>Seleccione una hora</option>`
+        document.body.appendChild(mostrarHora); 
+        
         for (let i=7; i<=20; i++){
           for (let min=0; min<6; min++){
             mostrarHora.innerHTML += `<option id="opcionesHora">${i}:${min}0</option>`

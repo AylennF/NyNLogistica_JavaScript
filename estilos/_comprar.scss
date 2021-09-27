@@ -1,4 +1,6 @@
 #fondo2 {
+  display: flex;
+  flex-direction: column;
   background-color: $colorAzul;
 }
 .seccionCompraServicio {
@@ -283,10 +285,11 @@
 
 p{
   #pSelect{
-    margin-top: 70px;
-    margin-left: 45%;
+    justify-content: center;
+    text-align: center;
     color:$colorBlanco;
     font-family: $monserrat;
+    margin-top: 80px;
     font-weight: bold;
   }
 }
@@ -294,13 +297,14 @@ p{
 select{
   border-style: none;
   background-color: $colorBlanco;
-  margin-left: 43%;
-  margin-bottom: 70px;
   height: 25px;
   width: 20%;
-
+  
+  align-self: center;
+  justify-content: center;
   text-align: center;
 
+  margin-bottom: 80px;
   color:$colorAzul;
   font-family: $monserrat;
   font-weight: bold;

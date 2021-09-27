@@ -24,23 +24,19 @@ function mostrarFecha(){
     const mes = fecha.getMonth()+1;
     const año = fecha.getFullYear();
 
-    console.log(dia);
-    console.log(mes);
-    console.log(año);
-    
     let mostrarFecha = document.getElementById("fecha");
     mostrarFecha.textContent = ("Fecha: "+ dia + "/"+ mes + "/" + año );
 }
 
 function mostrarNombre(){
     if ((localStorage.getItem("Nombre") != null) && (localStorage.getItem("Apellido") != null)){
-    let mostrarUsuario = document.getElementById("usuario");    
-    var nombre = localStorage.getItem("Nombre");
-    var apellido = localStorage.getItem("Apellido");
+        let mostrarUsuario = document.getElementById("usuario");    
+        var nombre = localStorage.getItem("Nombre");
+        var apellido = localStorage.getItem("Apellido");
 
-    tamNombre=nombre.length;
-    tamApellido=apellido.length;
-    mostrarUsuario.textContent = ("Usuario: "+ nombre.substr(1,tamNombre-2) + " " +  apellido.substr(1,tamApellido-2));
+        tamNombre=nombre.length;
+        tamApellido=apellido.length;
+        mostrarUsuario.textContent = ("Usuario: "+ nombre.substr(1,tamNombre-2) + " " +  apellido.substr(1,tamApellido-2));
     } 
 }
 
@@ -61,16 +57,32 @@ function mostrarDatosCompra(){
 }
 
 function mostrarDatosTurno(){
-        if (localStorage.getItem("Mes") != null){
-            var mes = localStorage.getItem("Mes");
-            var dia = localStorage.getItem("Dia");
-            var hora = localStorage.getItem("Hora");
-            // var hora = localStorage.getItem("Hora");
-            tamDia=dia.length-2;
-            tamMes=mes.length-2;
-            tamHora=hora.length-2;
+    if (localStorage.getItem("Mes") != null){
+        var mes = localStorage.getItem("Mes");
+        var dia = localStorage.getItem("Dia");
+        var hora = localStorage.getItem("Hora");
+        tamDia=dia.length-2;
+        tamMes=mes.length-2;
+        tamHora=hora.length-2;
 
-            totalTiempo = (cantServicios*30)/60;
-            $("<tr id='datosReciboTr'><td id='fechaTurno'>"+dia.substr(1,tamDia)+" de "+mes.substr(1,tamMes)+"</td><td id='horarioTurno'>"+hora.substr(1,tamHora)+"</td><td>"+totalTiempo+"hr</td></tr>").insertAfter("#tablaTurnos");
+        totalTiempo = (cantServicios*30)/60;
+
+        switch (totalTiempo){
+            case 0.5:
+            $("<tr id='datosReciboTr'><td id='fechaTurno'>"+dia.substr(1,tamDia)+" de "+mes.substr(1,tamMes)+"</td><td id='horarioTurno'>"+hora.substr(1,tamHora)+"</td><td>30min</td></tr>").insertAfter("#tablaTurnos");
+            break;
+
+            case 1:
+                $("<tr id='datosReciboTr'><td id='fechaTurno'>"+dia.substr(1,tamDia)+" de "+mes.substr(1,tamMes)+"</td><td id='horarioTurno'>"+hora.substr(1,tamHora)+"</td><td>1hr</td></tr>").insertAfter("#tablaTurnos");
+            break;
+
+            case 1.5:
+                $("<tr id='datosReciboTr'><td id='fechaTurno'>"+dia.substr(1,tamDia)+" de "+mes.substr(1,tamMes)+"</td><td id='horarioTurno'>"+hora.substr(1,tamHora)+"</td><td>1hr 30min</td></tr>").insertAfter("#tablaTurnos");
+            break;
+
+            case 2:
+                $("<tr id='datosReciboTr'><td id='fechaTurno'>"+dia.substr(1,tamDia)+" de "+mes.substr(1,tamMes)+"</td><td id='horarioTurno'>"+hora.substr(1,tamHora)+"</td><td>2hr</td></tr>").insertAfter("#tablaTurnos");
+            break;
         }
+    }
 }
